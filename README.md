@@ -14,7 +14,9 @@ install 720+ additional conda packages from the Anaconda repository.
 # PostgresSQL
 
 `$ sudo apt install postgresql-client`
+
 `$ sudo apt install postgresql`
+
 `$ ss -nlt` : "Once PostgreSQL Server has finished installing, you should be able to see it listening for incoming connections on port 5432. This is a good way to confirm that it’s up and running as expected."
 
 # Virtualenv
