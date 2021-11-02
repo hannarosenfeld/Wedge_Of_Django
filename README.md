@@ -21,21 +21,32 @@ install 720+ additional conda packages from the Anaconda repository.
 
 # Virtualenv
 
-Install pyenv on Ubuntu:
+## Install pyenv on Ubuntu
+
+1. Install dependencies
 
 ```
-#!/bin/bash
-
-sudo apt-get install git python-pip make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev curl
-sudo pip install virtualenvwrapper
-
-git clone https://github.com/yyuu/pyenv.git ~/.pyenv
-git clone https://github.com/yyuu/pyenv-virtualenvwrapper.git ~/.pyenv/plugins/pyenv-virtualenvwrapper
-
-echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
-echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
-echo 'eval "$(pyenv init -)"' >> ~/.bashrc
-echo 'pyenv virtualenvwrapper' >> ~/.bashrc
-
-exec $SHELL
+$ sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev \
+libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev \
+xz-utils tk-dev libffi-dev liblzma-dev
 ```
+
+2. Install pyenv
+
+`$ curl -L https://raw.githubusercontent.com/pyenv/pyenv-installer/master/bin/pyenv-installer | bash`
+
+3. Validate installation
+
+`pyenv -v`
+
+4. If it doesn't show up, add this to your `.zshrc`:
+
+```
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+if command -v pyenv 1>/dev/null 2>&1; then
+ eval "$(pyenv init -)"
+fi
+```
+
+reference: [](https://bgasparotto.com/install-pyenv-ubuntu-debian) 
