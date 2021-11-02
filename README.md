@@ -49,4 +49,4 @@ if command -v pyenv 1>/dev/null 2>&1; then
 fi
 ```
 
-[reference](https://bgasparotto.com/install-pyenv-ubuntu-debian) 
+([reference](https://bgasparotto.com/install-pyenv-ubuntu-debian))
