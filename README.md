@@ -1,7 +1,7 @@
 ## 2.2.3 Take Detailed Notes
 We highly recommend keeping a journal of:
 - All the commands typed in at the command line, and their results
--What is installed via GUI installers
+- What is installed via GUI installers
 
 # Conda
 
